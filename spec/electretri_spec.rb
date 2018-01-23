@@ -5,18 +5,31 @@ RSpec.describe Electretri do
     expect(Electretri::VERSION).not_to be nil
   end
 
-  let(:electretri) { Electretri.load_yml(electretri_yml) }
-
+  let(:by_yml) { Electretri.load_yml(electretri_yml) }
   context "load_yml" do
     it "returns hash file" do
-      expect(electretri).to be_an_instance_of(Hash)
-      expect(electretri.keys).to include(:name)
-      expect(electretri.keys).to include(:description)
-      expect(electretri.keys).to include(:enable_veto)
-      expect(electretri.keys).to include(:cut)
-      expect(electretri.keys).to include(:criteria)
-      expect(electretri.keys).to include(:profiles)
-      expect(electretri.keys).to include(:alternatives)
+      expect(by_yml).to be_an_instance_of(Hash)
+      expect(by_yml.keys).to include("name")
+      expect(by_yml.keys).to include("description")
+      expect(by_yml.keys).to include("enable_veto")
+      expect(by_yml.keys).to include("cut")
+      expect(by_yml.keys).to include("criteria")
+      expect(by_yml.keys).to include("profiles")
+      expect(by_yml.keys).to include("alternatives")
+    end
+  end
+
+  let(:by_json) { Electretri.load_yml(electretri_json) }
+  context "load_json" do
+    it "returns hash file" do
+      expect(by_json).to be_an_instance_of(Hash)
+      expect(by_json.keys).to include("name")
+      expect(by_json.keys).to include("description")
+      expect(by_json.keys).to include("enable_veto")
+      expect(by_json.keys).to include("cut")
+      expect(by_json.keys).to include("criteria")
+      expect(by_json.keys).to include("profiles")
+      expect(by_json.keys).to include("alternatives")
     end
   end
 end

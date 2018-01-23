@@ -8,6 +8,10 @@ module Electretri
       def electretri_yml
         resource('electretri.yml')
       end
+
+      def electretri_json
+        resource('electretri.json')
+      end
     end
   end
 end
