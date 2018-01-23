@@ -6,22 +6,16 @@ require "electretri/version"
 Gem::Specification.new do |spec|
   spec.name          = "electretri"
   spec.version       = Electretri::VERSION
-  spec.authors       = ["imbrito"]
-  spec.email         = ["ismael.20rj@gmail.com"]
+  spec.authors       = ["imbrito","kventura"]
+  spec.email         = ["ismael.20rj@gmail.com","kissilasventura@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{This gem implement the ELECTRE TRI algorithm.}
+  spec.description   = %q{The main objective of this work is to implement the ELECTRE TRI algorithm, one of the main multicriteria
+                          analysis algorithms. Consisting of evaluation criteria that allow to define alternatives that will be in
+                          comparisons, thus allowing, to establish and classify alternatives in the multicriteria decision-making
+                          environment, potentializing decision-making.}
+  spec.homepage      = "https://github.com/imbrito/electretri"
   spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
