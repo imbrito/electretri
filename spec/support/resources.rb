@@ -12,6 +12,10 @@ module Electretri
       def electretri_json
         resource('electretri.json')
       end
+
+      def electretri_xml
+        resource('electretri.xml')
+      end
     end
   end
 end

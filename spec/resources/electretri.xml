@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hash>
+  <name>Teste software ElectreTri</name>
+  <description>opicional</description>
+  <enable-veto type="boolean">false</enable-veto>
+  <cut type="float">0.76</cut>
+  <criteria>
+    <mercado>
+      <weigth type="float">0.3</weigth>
+      <indifference type="float">0.5</indifference>
+      <preference type="integer">1</preference>
+      <veto type="integer">2</veto>
+      <direction>increasing</direction>
+    </mercado>
+    <tecnologia>
+      <weigth type="float">0.4</weigth>
+      <indifference type="float">0.5</indifference>
+      <preference type="integer">1</preference>
+      <veto type="integer">2</veto>
+      <direction>increasing</direction>
+    </tecnologia>
+    <entrantes>
+      <weigth type="float">0.3</weigth>
+      <indifference type="float">0.5</indifference>
+      <preference type="integer">1</preference>
+      <veto type="integer">2</veto>
+      <direction>increasing</direction>
+    </entrantes>
+  </criteria>
+  <profiles>
+    <excelente>
+      <mercado type="integer">9</mercado>
+      <tecnologia type="integer">9</tecnologia>
+      <entrantes type="integer">9</entrantes>
+    </excelente>
+    <bom>
+      <mercado type="integer">7</mercado>
+      <tecnologia type="integer">7</tecnologia>
+      <entrantes type="integer">7</entrantes>
+    </bom>
+    <regular>
+      <mercado type="integer">5</mercado>
+      <tecnologia type="integer">5</tecnologia>
+      <entrantes type="integer">5</entrantes>
+    </regular>
+    <pessimo>
+      <mercado type="integer">3</mercado>
+      <tecnologia type="integer">3</tecnologia>
+      <entrantes type="integer">3</entrantes>
+    </pessimo>
+  </profiles>
+  <alternatives>
+    <cenario01>
+      <mercado type="integer">6</mercado>
+      <tecnologia type="integer">8</tecnologia>
+      <entrantes type="integer">5</entrantes>
+    </cenario01>
+    <cenario02>
+      <mercado type="integer">7</mercado>
+      <tecnologia type="integer">5</tecnologia>
+      <entrantes type="integer">6</entrantes>
+    </cenario02>
+    <cenario03>
+      <mercado type="integer">4</mercado>
+      <tecnologia type="integer">6</tecnologia>
+      <entrantes type="integer">5</entrantes>
+    </cenario03>
+  </alternatives>
+</hash>
