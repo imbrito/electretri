@@ -1,5 +1,8 @@
 require "electretri/version"
+require "yaml"
 
 module Electretri
-  # Your code goes here...
+  def self.load_yml(path)
+    YAML.load_file(path)
+  end
 end
