@@ -1,8 +1,8 @@
 require "spec_helper"
 
-RSpec.describe Electretri do
+RSpec.describe Electretri::API do
 
-  let(:by_json) { Electretri.load_json(electretri_json) }
+  let(:by_json) { Electretri::API.load_json(electretri_json) }
 
   context "load_json" do
     it "returns hash" do

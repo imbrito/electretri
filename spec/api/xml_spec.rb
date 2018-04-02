@@ -1,8 +1,8 @@
 require "spec_helper"
 
-RSpec.describe Electretri do
+RSpec.describe Electretri::API do
 
-  let(:by_xml) { Electretri.load_xml(electretri_xml) }
+  let(:by_xml) { Electretri::API.load_xml(electretri_xml) }
 
   context "load_xml" do
     it "returns hash" do

@@ -1,8 +1,8 @@
 require "spec_helper"
 
-RSpec.describe Electretri do
+RSpec.describe Electretri::API do
 
-  let(:by_yml) { Electretri.load_yml(electretri_yml) }
+  let(:by_yml) { Electretri::API.load_yml(electretri_yml) }
 
   context "load_yml" do
     it "returns hash" do
