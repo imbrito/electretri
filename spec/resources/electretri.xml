@@ -1,69 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hash>
   <name>Teste software ElectreTri</name>
-  <description>opicional</description>
-  <enable-veto type="boolean">false</enable-veto>
-  <cut type="float">0.76</cut>
+  <description>This is an implement the ELECTRE TRI algorithm.</description>
+  <enable-veto type="boolean">true</enable-veto>
+  <cut type="float">0.75</cut>
   <criteria>
-    <mercado>
+    <cr01>
       <weigth type="float">0.3</weigth>
       <indifference type="float">0.5</indifference>
-      <preference type="integer">1</preference>
-      <veto type="integer">2</veto>
+      <preference type="float">1.0</preference>
+      <veto type="float">2.0</veto>
       <direction>increasing</direction>
-    </mercado>
-    <tecnologia>
+    </cr01>
+    <cr02>
       <weigth type="float">0.4</weigth>
       <indifference type="float">0.5</indifference>
-      <preference type="integer">1</preference>
-      <veto type="integer">2</veto>
+      <preference type="float">1.0</preference>
+      <veto type="float">2.0</veto>
       <direction>increasing</direction>
-    </tecnologia>
-    <entrantes>
+    </cr02>
+    <cr03>
       <weigth type="float">0.3</weigth>
       <indifference type="float">0.5</indifference>
-      <preference type="integer">1</preference>
-      <veto type="integer">2</veto>
+      <preference type="float">1.0</preference>
+      <veto type="float">2.0</veto>
       <direction>increasing</direction>
-    </entrantes>
+    </cr03>
   </criteria>
-  <profiles>
-    <excelente>
-      <mercado type="integer">9</mercado>
-      <tecnologia type="integer">9</tecnologia>
-      <entrantes type="integer">9</entrantes>
-    </excelente>
-    <bom>
-      <mercado type="integer">7</mercado>
-      <tecnologia type="integer">7</tecnologia>
-      <entrantes type="integer">7</entrantes>
-    </bom>
-    <regular>
-      <mercado type="integer">5</mercado>
-      <tecnologia type="integer">5</tecnologia>
-      <entrantes type="integer">5</entrantes>
-    </regular>
-    <pessimo>
-      <mercado type="integer">3</mercado>
-      <tecnologia type="integer">3</tecnologia>
-      <entrantes type="integer">3</entrantes>
-    </pessimo>
-  </profiles>
+  <classes>
+    <cl01>
+      <cr01 type="float">7.0</cr01>
+      <cr02 type="float">7.0</cr02>
+      <cr03 type="float">7.0</cr03>
+    </cl01>
+    <cl02>
+      <cr01 type="float">5.0</cr01>
+      <cr02 type="float">5.0</cr02>
+      <cr03 type="float">5.0</cr03>
+    </cl02>
+    <cl03>
+      <cr01 type="float">3.0</cr01>
+      <cr02 type="float">3.0</cr02>
+      <cr03 type="float">3.0</cr03>
+    </cl03>
+  </classes>
   <alternatives>
-    <cenario01>
-      <mercado type="integer">6</mercado>
-      <tecnologia type="integer">8</tecnologia>
-      <entrantes type="integer">5</entrantes>
-    </cenario01>
-    <cenario02>
-      <mercado type="integer">7</mercado>
-      <tecnologia type="integer">5</tecnologia>
-      <entrantes type="integer">6</entrantes>
-    </cenario02>
-    <cenario03>
-      <mercado type="integer">4</mercado>
-      <tecnologia type="integer">6</tecnologia>
-      <entrantes type="integer">5</entrantes>
-    </cenario03>
+    <a01>
+      <cr01 type="float">6.0</cr01>
+      <cr02 type="float">8.0</cr02>
+      <cr03 type="float">5.0</cr03>
+    </a01>
+    <a02>
+      <cr01 type="float">7.0</cr01>
+      <cr02 type="float">5.0</cr02>
+      <cr03 type="float">6.0</cr03>
+    </a02>
+    <a03>
+      <cr01 type="float">4.0</cr01>
+      <cr02 type="float">6.0</cr02>
+      <cr03 type="float">5.0</cr03>
+    </a03>
   </alternatives>
 </hash>

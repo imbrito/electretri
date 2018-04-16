@@ -12,7 +12,7 @@ RSpec.describe Electretri::API do
       expect(by_json.keys).to include("enable_veto")
       expect(by_json.keys).to include("cut")
       expect(by_json.keys).to include("criteria")
-      expect(by_json.keys).to include("profiles")
+      expect(by_json.keys).to include("classes")
       expect(by_json.keys).to include("alternatives")
     end
   end

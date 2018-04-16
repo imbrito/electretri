@@ -1,54 +1,50 @@
 ---
 name: Teste software ElectreTri
-description: opicional
-enable_veto: false
-cut: 0.76
+description: This is an implement the ELECTRE TRI algorithm.
+enable_veto: true
+cut: 0.75
 criteria:
-  mercado:
+  cr01:
     weigth: 0.3
     indifference: 0.5
-    preference: 1
-    veto: 2
+    preference: 1.0
+    veto: 2.0
     direction: increasing
-  tecnologia:
+  cr02:
     weigth: 0.4
     indifference: 0.5
-    preference: 1
-    veto: 2
+    preference: 1.0
+    veto: 2.0
     direction: increasing
-  entrantes:
+  cr03:
     weigth: 0.3
     indifference: 0.5
-    preference: 1
-    veto: 2
+    preference: 1.0
+    veto: 2.0
     direction: increasing
-profiles:
-  excelente:
-    mercado: 9
-    tecnologia: 9
-    entrantes: 9
-  bom:
-    mercado: 7
-    tecnologia: 7
-    entrantes: 7
-  regular:
-    mercado: 5
-    tecnologia: 5
-    entrantes: 5
-  pessimo:
-    mercado: 3
-    tecnologia: 3
-    entrantes: 3
+classes:
+  cl01:
+    cr01: 7.0
+    cr02: 7.0
+    cr03: 7.0
+  cl02:
+    cr01: 5.0
+    cr02: 5.0
+    cr03: 5.0
+  cl03:
+    cr01: 3.0
+    cr02: 3.0
+    cr03: 3.0
 alternatives:
-  cenario01:
-    mercado: 6
-    tecnologia: 8
-    entrantes: 5
-  cenario02:
-    mercado: 7
-    tecnologia: 5
-    entrantes: 6
-  cenario03:
-    mercado: 4
-    tecnologia: 6
-    entrantes: 5
+  a01:
+    cr01: 6.0
+    cr02: 8.0
+    cr03: 5.0
+  a02:
+    cr01: 7.0
+    cr02: 5.0
+    cr03: 6.0
+  a03:
+    cr01: 4.0
+    cr02: 6.0
+    cr03: 5.0
