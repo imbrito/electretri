@@ -24,9 +24,9 @@ criteria:
     direction: increasing
 classes:
   cl01:
-    cr01: 7.0
-    cr02: 7.0
-    cr03: 7.0
+    cr01: 8.0
+    cr02: 8.0
+    cr03: 8.0
   cl02:
     cr01: 5.0
     cr02: 5.0

@@ -1,10 +1,7 @@
 require "electretri/version"
-require "active_support"
-require "active_support/core_ext"
-require "builder"
-require "yaml"
-require "json"
 
 module Electretri
-  autoload :API, 'electretri/api'
+  autoload :API, 				 'electretri/api'
+  autoload :Common, 		 'electretri/common'
+  autoload :Concordance, 'electretri/concordance'
 end
