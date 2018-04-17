@@ -5,19 +5,19 @@ enable_veto: true
 cut: 0.75
 criteria:
   cr01:
-    weigth: 0.3
+    weight: 0.3
     indifference: 0.5
     preference: 1.0
     veto: 2.0
     direction: increasing
   cr02:
-    weigth: 0.4
+    weight: 0.4
     indifference: 0.5
     preference: 1.0
     veto: 2.0
     direction: increasing
   cr03:
-    weigth: 0.3
+    weight: 0.3
     indifference: 0.5
     preference: 1.0
     veto: 2.0

@@ -6,21 +6,21 @@
   <cut type="float">0.75</cut>
   <criteria>
     <cr01>
-      <weigth type="float">0.3</weigth>
+      <weight type="float">0.3</weight>
       <indifference type="float">0.5</indifference>
       <preference type="float">1.0</preference>
       <veto type="float">2.0</veto>
       <direction>increasing</direction>
     </cr01>
     <cr02>
-      <weigth type="float">0.4</weigth>
+      <weight type="float">0.4</weight>
       <indifference type="float">0.5</indifference>
       <preference type="float">1.0</preference>
       <veto type="float">2.0</veto>
       <direction>increasing</direction>
     </cr02>
     <cr03>
-      <weigth type="float">0.3</weigth>
+      <weight type="float">0.3</weight>
       <indifference type="float">0.5</indifference>
       <preference type="float">1.0</preference>
       <veto type="float">2.0</veto>

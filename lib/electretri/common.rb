@@ -2,7 +2,7 @@ module Electretri
 	module Common
 		class << self
 
-			def partial_concordance_hash(project)
+			def partial_matrix_hash(project)
 				default = Hash.new
 				project["alternatives"].each_key { |alternative| default[alternative] = {} }
 				project["criteria"].each_key do |criterion|
@@ -17,7 +17,7 @@ module Electretri
 				default
 			end
 
-			def default_hash(project)
+			def global_matrix_hash(project)
 				default = Hash.new
 				project["alternatives"].each_key { |alternative| default[alternative] = {'aSbh' => {},'bhSa' => {}} }
 				default
