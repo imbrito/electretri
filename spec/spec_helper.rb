@@ -1,5 +1,6 @@
 require "bundler/setup"
 require "electretri"
+require "yaml"
 
 require File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib', 'electretri'))
 Dir[File.join(File.dirname(__FILE__), 'support', '**', '*.rb')].each { |f| require f }

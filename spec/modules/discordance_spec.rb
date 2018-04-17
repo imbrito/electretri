@@ -1,13 +1,13 @@
 require "spec_helper"
 
-RSpec.describe Electretri::Concordance do
+RSpec.describe Electretri::Discordance do
 	before(:each) do
 		Electretri::Concordance.partial_concordance_matrix(project)
 		Electretri::Concordance.global_concordance_matrix(project)
 		Electretri::Credibility.create_credibility_matrix(project)
 	end
 
-	subject!(:project) { Electretri::API.load_yml(electretri_yml) }
+	subject!(:project) { YAML.load_file(electretri_yml) }
 
 	let(:partial_discordance) {
 	{ "a01" => {"cr01" => {"aSbh" =>{"cl01"=>1.0, "cl02"=>0.0, "cl03"=>0.0}, "bhSa" =>{"cl01"=>0.0, "cl02"=>0.0, "cl03"=>1.0} },

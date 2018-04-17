@@ -7,7 +7,7 @@ RSpec.describe Electretri::Credibility do
 		Electretri::Credibility.create_credibility_matrix(project)
 	end
 	
-	subject!(:project) { Electretri::API.load_yml(electretri_yml) }
+	subject!(:project) { YAML.load_file(electretri_yml) }
 	
 	let(:credibility) {
 		{	"a01" => { "aSbh" =>{"cl01"=>0.4, "cl02"=>1.0, "cl03"=>1.0}, "bhSa" =>{"cl01"=>1.0, "cl02"=>0.3, "cl03"=>0.0} },

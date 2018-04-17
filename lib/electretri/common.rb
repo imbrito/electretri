@@ -23,6 +23,12 @@ module Electretri
 				default
 			end
 
+			def subordination_matrix_hash(project)
+				default = Hash.new
+				project["alternatives"].each_key { |alternative| default[alternative] = {'aSbh' => {} } }
+				default
+			end
+
 		end
 	end
 end

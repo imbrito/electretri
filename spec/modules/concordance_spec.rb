@@ -2,7 +2,7 @@ require "spec_helper"
 
 RSpec.describe Electretri::Concordance do
 	before { Electretri::Concordance.partial_concordance_matrix(project) }
-	subject!(:project) { Electretri::API.load_yml(electretri_yml) }
+	subject!(:project) { YAML.load_file(electretri_yml) }
 
 	let(:partial_concordance) {
 	{ "a01" => {"cr01" => {"aSbh" =>{"cl01"=>0.0, "cl02"=>1.0, "cl03"=>1.0}, "bhSa" =>{"cl01"=>1.0, "cl02"=>0.0, "cl03"=>0.0} },
