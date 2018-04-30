@@ -8,4 +8,5 @@ module Electretri
   autoload :Discordance, 		'electretri/discordance'
   autoload :Cut,				 		'electretri/cut'
   autoload :Subordination,	'electretri/subordination'
+  autoload :Classification, 'electretri/classification'
 end

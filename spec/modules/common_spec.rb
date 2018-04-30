@@ -2,8 +2,8 @@ require "spec_helper"
 
 RSpec.describe Electretri::Common do
 	subject(:project) { YAML.load_file(electretri_yml) }
-	
-	let(:partial) { 
+
+	let(:partial) {
 	{ "a01" => {"cr01" => {"aSbh" =>{"cl01"=>nil, "cl02"=>nil, "cl03"=>nil}, "bhSa" =>{"cl01"=>nil, "cl02"=>nil, "cl03"=>nil} },
 						"cr02" => {"aSbh" =>{"cl01"=>nil, "cl02"=>nil, "cl03"=>nil}, "bhSa" =>{"cl01"=>nil, "cl02"=>nil, "cl03"=>nil} },
 						"cr03" => {"aSbh" =>{"cl01"=>nil, "cl02"=>nil, "cl03"=>nil}, "bhSa" =>{"cl01"=>nil, "cl02"=>nil, "cl03"=>nil} } },
@@ -27,6 +27,12 @@ RSpec.describe Electretri::Common do
     "a03" => { "aSbh"=>{} } }
   }
 
+	let(:classification) {
+	{	"a01" => { "pessimistic"=>nil, "optimistic"=>nil },
+   	"a02" => { "pessimistic"=>nil, "optimistic"=>nil },
+    "a03" => { "pessimistic"=>nil, "optimistic"=>nil } }
+  }
+
   context "matrix hash" do
 
 		it "partial" do
@@ -42,6 +48,11 @@ RSpec.describe Electretri::Common do
 		it "subordination" do
 	  	expect(Electretri::Common.subordination_matrix_hash(project)).to be_an_instance_of(Hash)
 	    expect(Electretri::Common.subordination_matrix_hash(project)).to eq(subordination)
+		end
+
+		it "classification" do
+	  	expect(Electretri::Common.classification_matrix_hash(project)).to be_an_instance_of(Hash)
+	    expect(Electretri::Common.classification_matrix_hash(project)).to eq(classification)
 		end
 
 	end
