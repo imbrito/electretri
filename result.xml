@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hash>
+  <name>Teste software ElectreTri</name>
+  <description>This is an implement the ELECTRE TRI algorithm.</description>
+  <enable-veto type="boolean">true</enable-veto>
+  <cut type="float">0.75</cut>
+  <criteria>
+    <cr01>
+      <weight type="float">0.3</weight>
+      <indifference type="float">0.5</indifference>
+      <preference type="float">1.0</preference>
+      <veto type="float">2.0</veto>
+      <direction>increasing</direction>
+    </cr01>
+    <cr02>
+      <weight type="float">0.4</weight>
+      <indifference type="float">0.5</indifference>
+      <preference type="float">1.0</preference>
+      <veto type="float">2.0</veto>
+      <direction>increasing</direction>
+    </cr02>
+    <cr03>
+      <weight type="float">0.3</weight>
+      <indifference type="float">0.5</indifference>
+      <preference type="float">1.0</preference>
+      <veto type="float">2.0</veto>
+      <direction>increasing</direction>
+    </cr03>
+  </criteria>
+  <classes>
+    <cl01>
+      <cr01 type="float">8.0</cr01>
+      <cr02 type="float">8.0</cr02>
+      <cr03 type="float">8.0</cr03>
+    </cl01>
+    <cl02>
+      <cr01 type="float">5.0</cr01>
+      <cr02 type="float">5.0</cr02>
+      <cr03 type="float">5.0</cr03>
+    </cl02>
+    <cl03>
+      <cr01 type="float">3.0</cr01>
+      <cr02 type="float">3.0</cr02>
+      <cr03 type="float">3.0</cr03>
+    </cl03>
+  </classes>
+  <alternatives>
+    <a01>
+      <cr01 type="float">6.0</cr01>
+      <cr02 type="float">8.0</cr02>
+      <cr03 type="float">5.0</cr03>
+    </a01>
+    <a02>
+      <cr01 type="float">7.0</cr01>
+      <cr02 type="float">5.0</cr02>
+      <cr03 type="float">6.0</cr03>
+    </a02>
+    <a03>
+      <cr01 type="float">4.0</cr01>
+      <cr02 type="float">6.0</cr02>
+      <cr03 type="float">5.0</cr03>
+    </a03>
+  </alternatives>
+  <partial-concordance>
+    <a01>
+      <cr01>
+        <aSbh>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">1.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </bhSa>
+      </cr01>
+      <cr02>
+        <aSbh>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">1.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </bhSa>
+      </cr02>
+      <cr03>
+        <aSbh>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">1.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">1.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </bhSa>
+      </cr03>
+    </a01>
+    <a02>
+      <cr01>
+        <aSbh>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">1.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </bhSa>
+      </cr01>
+      <cr02>
+        <aSbh>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">1.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">1.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </bhSa>
+      </cr02>
+      <cr03>
+        <aSbh>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">1.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </bhSa>
+      </cr03>
+    </a02>
+    <a03>
+      <cr01>
+        <aSbh>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">1.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </bhSa>
+      </cr01>
+      <cr02>
+        <aSbh>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">1.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </bhSa>
+      </cr02>
+      <cr03>
+        <aSbh>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">1.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">1.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </bhSa>
+      </cr03>
+    </a03>
+  </partial-concordance>
+  <global-concordance>
+    <a01>
+      <aSbh>
+        <cl01 type="float">0.4</cl01>
+        <cl02 type="float">1.0</cl02>
+        <cl03 type="float">1.0</cl03>
+      </aSbh>
+      <bhSa>
+        <cl01 type="float">1.0</cl01>
+        <cl02 type="float">0.3</cl02>
+        <cl03 type="float">0.0</cl03>
+      </bhSa>
+    </a01>
+    <a02>
+      <aSbh>
+        <cl01 type="float">0.0</cl01>
+        <cl02 type="float">1.0</cl02>
+        <cl03 type="float">1.0</cl03>
+      </aSbh>
+      <bhSa>
+        <cl01 type="float">1.0</cl01>
+        <cl02 type="float">0.4</cl02>
+        <cl03 type="float">0.0</cl03>
+      </bhSa>
+    </a02>
+    <a03>
+      <aSbh>
+        <cl01 type="float">0.0</cl01>
+        <cl02 type="float">0.7</cl02>
+        <cl03 type="float">1.0</cl03>
+      </aSbh>
+      <bhSa>
+        <cl01 type="float">1.0</cl01>
+        <cl02 type="float">0.6</cl02>
+        <cl03 type="float">0.0</cl03>
+      </bhSa>
+    </a03>
+  </global-concordance>
+  <credibility>
+    <a01>
+      <aSbh>
+        <cl01 type="float">0.0</cl01>
+        <cl02 type="float">1.0</cl02>
+        <cl03 type="float">1.0</cl03>
+      </aSbh>
+      <bhSa>
+        <cl01 type="float">1.0</cl01>
+        <cl02 type="float">0.0</cl02>
+        <cl03 type="float">0.0</cl03>
+      </bhSa>
+    </a01>
+    <a02>
+      <aSbh>
+        <cl01 type="float">0.0</cl01>
+        <cl02 type="float">1.0</cl02>
+        <cl03 type="float">1.0</cl03>
+      </aSbh>
+      <bhSa>
+        <cl01 type="float">1.0</cl01>
+        <cl02 type="float">0.0</cl02>
+        <cl03 type="float">0.0</cl03>
+      </bhSa>
+    </a02>
+    <a03>
+      <aSbh>
+        <cl01 type="float">0.0</cl01>
+        <cl02 type="float">0.7</cl02>
+        <cl03 type="float">1.0</cl03>
+      </aSbh>
+      <bhSa>
+        <cl01 type="float">1.0</cl01>
+        <cl02 type="float">0.6</cl02>
+        <cl03 type="float">0.0</cl03>
+      </bhSa>
+    </a03>
+  </credibility>
+  <partial-discordance>
+    <a01>
+      <cr01>
+        <aSbh>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </bhSa>
+      </cr01>
+      <cr02>
+        <aSbh>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">1.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </bhSa>
+      </cr02>
+      <cr03>
+        <aSbh>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </bhSa>
+      </cr03>
+    </a01>
+    <a02>
+      <cr01>
+        <aSbh>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">1.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </bhSa>
+      </cr01>
+      <cr02>
+        <aSbh>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </bhSa>
+      </cr02>
+      <cr03>
+        <aSbh>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </bhSa>
+      </cr03>
+    </a02>
+    <a03>
+      <cr01>
+        <aSbh>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </bhSa>
+      </cr01>
+      <cr02>
+        <aSbh>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </bhSa>
+      </cr02>
+      <cr03>
+        <aSbh>
+          <cl01 type="float">1.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">0.0</cl03>
+        </aSbh>
+        <bhSa>
+          <cl01 type="float">0.0</cl01>
+          <cl02 type="float">0.0</cl02>
+          <cl03 type="float">1.0</cl03>
+        </bhSa>
+      </cr03>
+    </a03>
+  </partial-discordance>
+  <cut-level>
+    <a01>
+      <aSbh>
+        <cl01 type="integer">0</cl01>
+        <cl02 type="integer">1</cl02>
+        <cl03 type="integer">1</cl03>
+      </aSbh>
+      <bhSa>
+        <cl01 type="integer">1</cl01>
+        <cl02 type="integer">0</cl02>
+        <cl03 type="integer">0</cl03>
+      </bhSa>
+    </a01>
+    <a02>
+      <aSbh>
+        <cl01 type="integer">0</cl01>
+        <cl02 type="integer">1</cl02>
+        <cl03 type="integer">1</cl03>
+      </aSbh>
+      <bhSa>
+        <cl01 type="integer">1</cl01>
+        <cl02 type="integer">0</cl02>
+        <cl03 type="integer">0</cl03>
+      </bhSa>
+    </a02>
+    <a03>
+      <aSbh>
+        <cl01 type="integer">0</cl01>
+        <cl02 type="integer">0</cl02>
+        <cl03 type="integer">1</cl03>
+      </aSbh>
+      <bhSa>
+        <cl01 type="integer">1</cl01>
+        <cl02 type="integer">0</cl02>
+        <cl03 type="integer">0</cl03>
+      </bhSa>
+    </a03>
+  </cut-level>
+  <subordination>
+    <a01>
+      <aSbh>
+        <cl01>&lt;</cl01>
+        <cl02>&gt;</cl02>
+        <cl03>&gt;</cl03>
+      </aSbh>
+    </a01>
+    <a02>
+      <aSbh>
+        <cl01>&lt;</cl01>
+        <cl02>&gt;</cl02>
+        <cl03>&gt;</cl03>
+      </aSbh>
+    </a02>
+    <a03>
+      <aSbh>
+        <cl01>&lt;</cl01>
+        <cl02>R</cl02>
+        <cl03>&gt;</cl03>
+      </aSbh>
+    </a03>
+  </subordination>
+  <classification>
+    <a01>
+      <pessimistic>cl01</pessimistic>
+      <optimistic>cl01</optimistic>
+    </a01>
+    <a02>
+      <pessimistic>cl01</pessimistic>
+      <optimistic>cl01</optimistic>
+    </a02>
+    <a03>
+      <pessimistic>cl02</pessimistic>
+      <optimistic>cl01</optimistic>
+    </a03>
+  </classification>
+</hash>

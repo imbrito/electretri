@@ -16,6 +16,10 @@ module Electretri
       def electretri_xml
         resource('electretri.xml')
       end
+
+      def result_yml
+        resource('result.yml')
+      end
     end
   end
 end

@@ -9,4 +9,5 @@ module Electretri
   autoload :Cut,				 		'electretri/cut'
   autoload :Subordination,	'electretri/subordination'
   autoload :Classification, 'electretri/classification'
+  autoload :Calculate,        'electretri/calculate'
 end
