@@ -2,9 +2,11 @@
 
 # Electretri
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/electretri`. To experiment with that code, run `bin/console` for an interactive prompt.
+The main objective of this work is to model and develop a micro service implementing the ELECTRE TRI algorithm.
 
-TODO: Delete this and the text above, and describe your gem
+ELECTRE TRI is one of the main multicriteria analysis algorithms, based on the classification concept.
+
+By means of evaluation criteria that allow to define alternatives that will be in comparison, thus allowing to establish preferences among the alternatives under analysis, making it possible to meet the real needs of users who wish to classify alternatives in the multicriteria decision making environment.
 
 ## Installation
 
@@ -24,13 +26,44 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
++  `include` or `extend` result method.
 
-## Development
+    The result method receives a hash object and returns a hash with the results.
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+    Example:
+            AwesomeClass
+              extend Electretri
+            end
+            AwesomeClass.result(hash)
+            
+        or,
+            
+            AwesomeClass
+              include Electretri
+            end
+            awesome = AwesomeClass.new
+            awesome.result(hash)
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
++ Object
+
+    Uses the result method encapsulated through the class constructor.
+        Example:
+            Electretri::Calculate.new(hash)
+
+
++ API (integrated with your webservices)
+
+    It receives a file of type: YAML, JSON or XML and returns a file of the same received type.
+        Example:
+            Electretri::API.load_yml(yml_file.yml)
+            Electretri::API.load_xml(xml_file.xml)
+            Electretri::API.load_json(json_file.json)
+            
+    For more information go to: `lib/electretri/api.rb`.
+
+    See the file structure in the directory: `spec/resources`.
+
+Any software that is able to run a script or line of ruby ​​code can use gem after its installation.
 
 ## Contributing
 

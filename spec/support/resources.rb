@@ -20,6 +20,14 @@ module Electretri
       def result_yml
         resource('result.yml')
       end
+
+      def result_json
+        resource('result.json')
+      end
+
+      def result_xml
+        resource('result.xml')
+      end
     end
   end
 end

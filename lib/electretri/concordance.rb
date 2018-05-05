@@ -5,11 +5,11 @@ module Electretri
       def global_concordance_matrix(project)
         project["global_concordance"] = Electretri::Common.global_matrix_hash(project)
         project["classes"].each_key do |klass|
-          project["partial_concordance"].keys.each do |key| 
-            aSbh, bhSa = 0, 0
-            project["partial_concordance"][key].each_key do |value| 
-              aSbh += (project["partial_concordance"][key][value]['aSbh'][klass] * project["criteria"][value]["weight"])
-              bhSa += (project["partial_concordance"][key][value]['bhSa'][klass] * project["criteria"][value]["weight"])
+          project["partial_concordance"].keys.each do |key|
+            aSbh, bhSa = 0.0, 0.0
+            project["partial_concordance"][key].each_key do |value|
+              aSbh += (project["partial_concordance"][key][value]['aSbh'][klass].to_f * project["criteria"][value]["weight"])
+              bhSa += (project["partial_concordance"][key][value]['bhSa'][klass].to_f * project["criteria"][value]["weight"])
             end
             project["global_concordance"][key]['aSbh'][klass] = aSbh.round(2)
             project["global_concordance"][key]['bhSa'][klass] = bhSa.round(2)
@@ -30,8 +30,8 @@ module Electretri
 
       def increasing_partial_concordance(project,criterion,matrix)
       	project["alternatives"].each_key do |alternative|
-      		project["classes"].each_key do |klass|    		
-            
+      		project["classes"].each_key do |klass|
+
             case
         		#subordination: aSbh
             when ( project["alternatives"][alternative][criterion] <= (project["classes"][klass][criterion] -
@@ -55,18 +55,18 @@ module Electretri
 
       			case
       			#subordination: bhSa
-      			when ( project["classes"][klass][criterion] <= (project["alternatives"][alternative][criterion] - 
+      			when ( project["classes"][klass][criterion] <= (project["alternatives"][alternative][criterion] -
               project["criteria"][criterion]["preference"]) )
 
       				matrix[alternative][criterion]['bhSa'][klass] = 0.0
 
-      			when ( (project["alternatives"][alternative][criterion] - project["criteria"][criterion]["indifference"]) < 
+      			when ( (project["alternatives"][alternative][criterion] - project["criteria"][criterion]["indifference"]) <
               project["classes"][klass][criterion] )
 
       				matrix[alternative][criterion]['bhSa'][klass] = 1.0
 
-      			when ( (project["alternatives"][alternative][criterion] - project["criteria"][criterion]["preference"]) < 
-              project["classes"][klass][criterion]) && (project["classes"][klass][criterion] <= 
+      			when ( (project["alternatives"][alternative][criterion] - project["criteria"][criterion]["preference"]) <
+              project["classes"][klass][criterion]) && (project["classes"][klass][criterion] <=
               (project["alternatives"][alternative][criterion] - project["criteria"][criterion]["indifference"]) )
 
       				numerator = project["classes"][klass][criterion] - project["alternatives"][alternative][criterion] + project["criteria"][criterion]["preference"]
