@@ -4,7 +4,9 @@ module Electretri
     Electretri::Concordance.partial_concordance_matrix(project)
     Electretri::Concordance.global_concordance_matrix(project)
     Electretri::Credibility.create_credibility_matrix(project)
-    Electretri::Discordance.partial_discordance_matrix(project)
+    if project["enable_veto"]
+      Electretri::Discordance.partial_discordance_matrix(project)
+    end
     Electretri::Cut.cut_level_matrix(project)
     Electretri::Subordination.subordination_matrix(project)
     Electretri::Classification.classification_matrix(project)
